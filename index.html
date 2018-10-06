@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train table</title>
+    <meta trainName="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3">Anytime is Train Time!</h1>
+            <p class="lead">Train schedule database!</p>
+        </div>
+        <div class="card border-info">
+            <h4 class="card-header bg-info">Available Train Info</h4>
+            <div class="card-body">
+                <table class="table table-hover table-sm">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency (min)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes away</th>
+                         
+                        </tr>
+                    </thead>
+                    <tbody id="trains">
+                     
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card border-info mt-3">
+            <h4 class="card-header bg-info">Add Train info:</h4>
+            <div class="card-body">
+                <form id="myForm">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Train Name</label>
+                        <input type="text" class="form-control" id="train-name" placeholder="Dakota Express">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Chicago">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">First train time (HH:mm- military time)</label>
+                        <input type="text" class="form-control" id="first-train" placeholder="05:30">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequency" placeholder="45">
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-form" >Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+
+
+</body>
+</html>
